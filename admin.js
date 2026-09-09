@@ -1,41 +1,12 @@
 /* ============================================================
    admin.js
-   Logic for the private studio / admin panel — its own page
-   (admin.html) now, reachable via the 5-click AFS-mark trigger
-   on user.html, gated by its own password prompt on load.
-
-   Load order in the HTML: config.js -> storage.js -> api.js -> admin.js
+   Logic for the private studio / admin panel — same page as the
+   storefront now (reachable via the 5-click + password gate in
+   user.js). Uses the shared `products` / `orders` / `adminSelected`
+   variables declared in user.js, and the shared live Firebase
+   listeners set up there too.
    ============================================================ */
 
-let products = [];
-let orders = [];
-let heroImages = [];
-let adminSelected = null;
-
-// ---- Password gate (studio access) ----
-function openPwModal(){
-  $('#pwInput').value = '';
-  $('#pwError').textContent = '';
-  $('#pwModal').classList.add('open');
-  setTimeout(() => $('#pwInput').focus(), 100);
-}
-function closePwModal(){ $('#pwModal').classList.remove('open'); }
-function checkPassword(){
-  const val = $('#pwInput').value.trim();
-  if(val === 'FASHAY'){
-    closePwModal();
-    unlockAdminPanel();
-  } else {
-    $('#pwError').textContent = 'Galat password. Dobara try karo.';
-    $('#pwInput').value = '';
-    $('#pwInput').focus();
-  }
-}
-function wirePwModal(){
-  $('#pwSubmit')?.addEventListener('click', checkPassword);
-  $('#pwInput')?.addEventListener('keydown', e => { if(e.key==='Enter') checkPassword(); });
-  $('#pwCancel')?.addEventListener('click', () => { window.location.href = 'user.html'; });
-}
 
 // ---- Product list (left column) ----
 function renderAdminList(){
@@ -289,7 +260,7 @@ function safeRenderAdminOrders(){
   renderAdminOrders();
 }
 
-// Called once the password gate succeeds.
+// Called from user.js once the 5-click + password gate succeeds.
 function unlockAdminPanel(){
   $('#adminPanel').classList.add('open');
   $('#adminPanel').setAttribute('aria-hidden', 'false');
@@ -298,6 +269,7 @@ function unlockAdminPanel(){
 }
 
 // Wires the admin panel's own controls (tabs, new product, close button).
+// Called once from user.js's DOMContentLoaded.
 function wireAdminPanel(){
   document.querySelectorAll('.admin-tab').forEach(tab => {
     tab.onclick = () => {
@@ -325,9 +297,10 @@ function wireAdminPanel(){
     }).catch(() => alert('Hero images save nahi ho saka — internet check karo.'));
   });
 
-  // Close = back to the storefront page (this is its own page now)
+  // Close = just hide the overlay, back to the storefront (same page)
   $('#closeAdmin')?.addEventListener('click', () => {
-    window.location.href = 'user.html';
+    $('#adminPanel').classList.remove('open');
+    $('#adminPanel').setAttribute('aria-hidden', 'true');
   });
 
   // New product
@@ -341,27 +314,4 @@ function wireAdminPanel(){
     renderAdmin();
   });
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  wirePwModal();
-  wireAdminPanel();
-  openPwModal();
-
-  // Products, orders and hero images load live from Firebase — the same
-  // shared data user.html reads, so edits here show up there immediately.
-  watchProducts(list => {
-    const prevId = adminSelected?.id;
-    products = list;
-    adminSelected = products.find(p => p.id === prevId) || products[0] || null;
-    safeRenderAdmin();
-  });
-  watchOrders(list => {
-    orders = list;
-    safeRenderAdminOrders();
-  });
-  watchHeroImages(list => {
-    heroImages = list;
-    safeRenderAdminHero();
-  });
-});
-                                                                        
+  
