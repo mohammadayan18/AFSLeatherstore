@@ -80,4 +80,4 @@ function isLight(hex){
   return (r*299 + g*587 + b*114) / 1000 > 128;
 }
 
-  
+         
