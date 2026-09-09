@@ -1,342 +1,216 @@
 <!doctype html>
 <html lang="en">
-<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AFS Leather — Custom leather, made slowly.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <script>(function(){try{if(localStorage.getItem('afs-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
-  <div class="marquee-bar">
-    <div class="marquee-track">
-      <span>FREE DELIVERY ACROSS PAKISTAN</span><span>·</span><span>COMPLIMENTARY MONOGRAMMING THIS WEEK</span><span>·</span><span>MADE SLOWLY</span><span>·</span><span>DESIGNED FOR A LONG LIFE</span><span>·</span>
-      <span>FREE DELIVERY ACROSS PAKISTAN</span><span>·</span><span>COMPLIMENTARY MONOGRAMMING THIS WEEK</span><span>·</span><span>MADE SLOWLY</span><span>·</span><span>DESIGNED FOR A LONG LIFE</span><span>·</span>
-    </div>
-  </div>
-  <header class="site-header">
-    <div class="brand">
-      <span class="brand-mark" id="adminTrigger" title="Studio access">AFS</span>
-      <a href="#top" style="display:flex;align-items:center;gap:10px;"><span>AFS <i>Leather</i></span></a>
-    </div>
-    <nav>
-      <a href="#top">Home</a>
-      <a href="#collection">Shop</a>
-      <a href="preview.html" id="studioNavLink">Studio</a>
-      <a href="#" id="trackOrderNav">Track order</a>
-      <a href="#" id="myOrdersNav">My Orders</a>
-    </nav>
-    <div class="header-actions">
-      <button class="icon-pill" id="trackOrderIcon" title="Track your order" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      </button>
-      <button class="icon-pill" id="themeToggle" title="Toggle dark mode" type="button">
-        <svg id="themeIconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg id="themeIconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-      </button>
-      <button class="cart-button" data-open-cart><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><b id="cartCount">00</b></button>
-      <div id="authArea"></div>
-    </div>
-  </header>
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">The new everyday, made better</p>
-        <h1>Leather, with<br><em>a little soul.</em></h1>
-        <p>Leather jackets, belts, wallets and caps — shaped by hand, built for daily wear, and designed to get better with age. Shop the studio edit, then make it yours.</p>
-        <div class="hero-cta-row">
-          <a class="hero-cta" href="#collection">Explore the edit <span>→</span></a>
-          <a class="hero-view-link" href="#collection">Our point of view ›</a>
-        </div>
-      </div>
-      <div class="hero-stats">
-        <div><b>01</b><p>Made in small studio batches</p></div>
-        <div><b>02</b><p>Vegetable-tanned leather</p></div>
-        <div><b>∞</b><p>Designed to age beautifully</p></div>
-      </div>
-      <div class="hero-strip">
-        <button class="hero-arrow prev" id="heroPrev" type="button" aria-label="Previous">←</button>
-        <div class="hero-arches" id="heroArches"></div>
-        <button class="hero-arrow next" id="heroNext" type="button" aria-label="Next">→</button>
-      </div>
-    </section>
-
-    <div class="promo-bar">
-      <span>THIS WEEK AT THE STUDIO &nbsp; <b>Free leather monogramming</b> ✳ On all orders above Rs. 12,000</span>
-      <a href="#collection">Shop now →</a>
-    </div>
-
-
-    <section class="manifesto">
-      <div>
-        <p class="eyebrow">Our point of view</p>
-        <h2>Objects that get<br><em>better with use.</em></h2>
-      </div>
-      <div>
-        <p>Leather is not a finish we apply. It is the beginning of the design. We cut slowly, keep the useful marks, and leave room for the material to become yours.</p>
-        <div class="stats">
-          <span><b>12 yrs</b>of quiet craft</span>
-          <span><b>01 of 01</b>made for you</span>
-          <span><b>48 hr</b>studio response</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="collection" id="collection">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">The studio edit / 2026</p>
-          <h2>Leather goods,<br><em>well considered.</em></h2>
-        </div>
-        <p>A tightly edited collection for carrying, wearing and giving. Every piece can be customised at checkout.</p>
-      </div>
-      <div class="collection-toolbar">
-        <div class="filter-chips" id="filterChips"></div>
-        <div class="search-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input id="productSearch" placeholder="Search belt, wallet, jacket, cap…" autocomplete="off">
-        </div>
-      </div>
-      <div class="product-grid" id="productGrid"></div>
-    </section>
-    <!-- ================= PRODUCT DETAIL PAGE ================= -->
-    <section class="page-overlay" id="productDetail">
-      <div class="page-overlay-bar">
-        <button class="page-back" id="closeProductDetail">← Back to collection</button>
-        <span class="page-crumb" id="pdCrumb"></span>
-        <button class="page-x" id="closeProductDetailX" title="Close" type="button">×</button>
-      </div>
-      <div class="pd-wrap">
-        <div class="pd-media">
-          <img id="pdImage" alt="">
-        </div>
-        <div class="pd-info">
-          <p class="eyebrow" id="pdCategory"></p>
-          <h1 id="pdName"></h1>
-          <div class="pd-price-row">
-            <span class="pd-price" id="pdPrice"></span>
-            <span class="pd-price-note">Made to order · ships in 5–7 days</span>
-          </div>
-          <p class="pd-desc" id="pdDescription"></p>
-          <div class="pd-qty-row">
-            <strong>Quantity</strong>
-            <div class="qty-stepper">
-              <button type="button" id="pdQtyMinus">−</button>
-              <span id="pdQtyValue">1</span>
-              <button type="button" id="pdQtyPlus">+</button>
-            </div>
-          </div>
-          <div class="pd-actions">
-            <button class="button dark" id="pdAddToCart">Add to cart <span>→</span></button>
-            <button class="button gold" id="pdCustomize">Customize this product <span>↗</span></button>
-          </div>
-          <ul class="pd-meta-list">
-            <li><b>✓</b> Hand-finished full-grain leather</li>
-            <li><b>✓</b> Free size & fit adjustment on request</li>
-            <li><b>✓</b> Cash on delivery available nationwide</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Track order — popup -->
-  <div class="modal track-modal" id="trackModal">
-    <button class="close" data-close-track>×</button>
-    <p class="eyebrow">Live order updates</p>
-    <h2>Track your <em>piece.</em></h2>
-    <form id="trackForm" class="track-input-wrap">
-      <input id="trackId" placeholder="Enter your track ID" required autocomplete="off">
-      <button class="track-submit-btn" type="submit">Find</button>
-    </form>
-    <div id="trackDefault" class="track-default">
-      <span class="track-default-icon">📦</span>
-      <strong>Your order, in your hands.</strong>
-      <p>Your track ID arrives here after checkout.</p>
-    </div>
-    <div id="trackResult" class="track-result-card" style="display:none"></div>
-    <p class="track-modal-note">✉ Status updates are sent to your order email.</p>
-  </div>
-  <!-- ================= AUTH MODAL (Login / Sign up / Forgot password) ================= -->
-  <div class="modal auth-modal" id="authModal">
-    <button class="close" data-close-auth>×</button>
-    <div class="auth-modal-grid">
-      <div class="auth-side">
-        <div class="auth-brandmark"><span>AFS</span> AFS Account</div>
-        <h2 class="auth-side-title">Your leather<br>story starts <em>here.</em></h2>
-        <p class="auth-side-copy">Save your edits, track every order, and keep your favourite pieces close.</p>
-        <ul class="auth-perks">
-          <li>◆ OTP verified accounts</li>
-          <li>◆ Faster checkout next time</li>
-          <li>◆ Private order tracking</li>
-        </ul>
-      </div>
-      <div class="auth-main">
-    <p class="eyebrow auth-secure-tag">🔒 Secure account</p>
-    <div class="auth-tabs">
-      <button class="auth-tab active" data-auth-tab="login">Sign in</button>
-      <button class="auth-tab" data-auth-tab="signup">Create account</button>
-    </div>
-
-    <form id="loginForm" class="auth-panel active">
-      <p class="eyebrow">Welcome back</p>
-      <h2>Login to your account</h2>
-      <input id="loginEmail" type="email" placeholder="Email address" required autocomplete="email">
-      <input id="loginPassword" type="password" placeholder="Password" required autocomplete="current-password">
-      <p class="auth-error" id="loginError"></p>
-      <button class="button gold full" type="submit">Login →</button>
-      <a href="#" id="forgotPasswordLink" class="auth-link">Forgot password?</a>
-    </form>
-
-    <form id="signupForm" class="auth-panel">
-      <p class="eyebrow">New here?</p>
-      <h2>Create your account</h2>
-      <p class="auth-note">Order place karne ke liye ek account chahiye — 1 minute lagega.</p>
-      <input id="signupName" placeholder="Full name" required autocomplete="name">
-      <input id="signupEmail" type="email" placeholder="Email address" required autocomplete="email">
-      <input id="signupPhone" placeholder="Phone number, e.g. 03001234567" required autocomplete="tel">
-      <select id="signupCity" required>
-      <option value="">Select city</option>
-      <option>Karachi</option>
-      <option>Lahore</option>
-      <option>Islamabad</option>
-      <option>Rawalpindi</option>
-      <option>Faisalabad</option>
-      <option>Multan</option>
-      <option>Peshawar</option>
-      <option>Quetta</option>
-      <option>Sialkot</option>
-      <option>Gujranwala</option>
-      <option>Hyderabad</option>
-      <option>Bahawalpur</option>
-      <option>Sargodha</option>
-      <option>Sukkur</option>
-      <option>Sheikhupura</option>
-      <option>Gujrat</option>
-      <option>Kasur</option>
-      <option>Sahiwal</option>
-      <option>Okara</option>
-      <option>Abbottabad</option>
-      <option>Mardan</option>
-      <option>Muzaffargarh</option>
-      <option>Jhang</option>
-      <option>Chiniot</option>
-      <option>Mingora</option>
-      <option value="Other">Other</option>
-      </select>
-      <input id="signupCityOther" placeholder="Apna city likho" style="display:none">
-      <textarea id="signupAddress" placeholder="Complete address" required></textarea>
-      <input id="signupPostal" placeholder="Postal code" required>
-      <input id="signupPassword" type="password" placeholder="Password (min 6 characters)" required autocomplete="new-password">
-      <input id="signupConfirmPassword" type="password" placeholder="Confirm password" required autocomplete="new-password">
-      <p class="auth-error" id="signupError"></p>
-      <button class="button gold full" type="submit">Sign Up →</button>
-    </form>
-
-    <form id="forgotStep1Form" class="auth-panel">
-      <p class="eyebrow">Reset password</p>
-      <h2>Enter your email</h2>
-      <p class="auth-note">Aapke email par ek 6-digit OTP code bhejenge.</p>
-      <input id="fpEmail" type="email" placeholder="Email address" required>
-      <p class="auth-error" id="fpStep1Error"></p>
-      <button class="button gold full" type="submit">Send OTP →</button>
-      <a href="#" id="backToLoginLink" class="auth-link">Back to login</a>
-    </form>
-
-    <form id="forgotStep2Form" class="auth-panel">
-      <p class="eyebrow">Check your email</p>
-      <h2>Enter the OTP & new password</h2>
-      <input id="fpOtp" placeholder="6-digit OTP" maxlength="6" required>
-      <input id="fpNewPassword" type="password" placeholder="New password" required autocomplete="new-password">
-      <input id="fpConfirmPassword" type="password" placeholder="Confirm new password" required autocomplete="new-password">
-      <p class="auth-error" id="fpStep2Error"></p>
-      <button class="button gold full" type="submit">Reset password →</button>
-    </form>
-
-    <form id="signupOtpForm" class="auth-panel">
-      <p class="eyebrow">Verify your email</p>
-      <h2>OTP Enter karo</h2>
-      <p class="signup-otp-hint" style="color:var(--muted);font-size:12px;margin:0;"></p>
-      <input id="signupOtpInput" placeholder="6-digit OTP" maxlength="6" required autocomplete="one-time-code">
-      <p class="auth-error" id="signupOtpError"></p>
-      <button class="button gold full" type="submit">Verify & Sign Up →</button>
-    </form>
-      </div>
-    </div>
-  </div>
-  <!-- My Orders Drawer -->
-  <aside class="drawer" id="myOrdersDrawer" style="overflow-y:auto;">
-    <button class="close" id="closeMyOrders">×</button>
-    <p class="eyebrow" style="margin-top:8px;">Your purchases</p>
-    <h2 style="margin-bottom:24px;">My <em style="font-family:var(--serif);font-style:italic;color:var(--gold);">Orders</em></h2>
-    <div id="myOrdersList"></div>
-  </aside>
-
-  <footer>
-    <a class="brand" href="#top"><span class="brand-mark">AFS</span><span>AFS <i>Leather</i></span></a>
-    <p>Custom leather goods for a life well carried.</p>
-    <a href="preview.html">Back to studio ↗</a>
-  </footer>
-
-  <aside class="drawer cart-modal" id="cartDrawer">
-    <button class="close" data-close-cart>×</button>
-    <p class="eyebrow">Your edit</p>
-    <h2>Shopping bag <span id="cartModalCount" style="color:var(--muted);font-family:var(--sans);font-size:16px;font-weight:700;">(0)</span></h2>
-    <p class="cart-head-count" id="cartHeadCount"></p>
-    <div id="cartItems"></div>
-    <div id="cartFooter" style="display:none;">
-      <div class="cart-total"><span>Estimated total</span><b id="cartTotal">Rs. 0</b></div>
-      <button class="button gold full" id="checkout">Proceed to checkout →</button>
-    </div>
-  </aside>
-
-  <div class="modal" id="checkoutModal">
-    <button class="close" data-close-checkout>×</button>
-    <p class="eyebrow">CONFIRM YOUR ORDER</p>
-    <h2>Let's send it<br><em>to you.</em></h2>
-    <form id="checkoutForm">
-      <input id="customerName" placeholder="Full name" required>
-      <input id="customerPhone" placeholder="Phone number" required>
-      <textarea id="customerAddress" placeholder="Complete delivery address" required></textarea>
-      <input id="customerPostal" placeholder="Postal code" required>
-      <select id="payment">
-        <option>Cash on Delivery (COD)</option>
-        <option>JazzCash</option>
-        <option>EasyPaisa</option>
-      </select>
-      <button class="button gold full" type="submit">Place order →</button>
-    </form>
-    <p class="checkout-note">Demo checkout — no payment is charged.</p>
-  </div>
-
-  <!-- Change password modal -->
-  <div class="modal auth-modal auth-modal-narrow" id="changePasswordModal">
-    <button class="close" data-close-changepw>×</button>
-    <div class="auth-main">
-    <p class="eyebrow auth-secure-tag">🔒 Account security</p>
-    <h2 style="font-size:34px;">Change<br><em>password.</em></h2>
-    <form id="changePasswordForm">
-      <input id="cpCurrent" type="password" placeholder="Current password" required autocomplete="current-password">
-      <input id="cpNew" type="password" placeholder="New password (min 6 characters)" required autocomplete="new-password">
-      <input id="cpConfirm" type="password" placeholder="Confirm new password" required autocomplete="new-password">
-      <p class="auth-error" id="cpError"></p>
-      <button class="button gold full" type="submit">Update password →</button>
-    </form>
-    </div>
-  </div>
-
-  <div class="toast" id="toast"></div>
-
-  <div class="backdrop" id="backdrop"></div>
-  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="config.js"></script>
-  <script src="storage.js"></script>
-  <script src="user.js"></script>
-</body>
-                                                                                                                               </html>
-          
+  <style>
+:root{--ink:#171311;--charcoal:#211c19;--paper:#f6f1e4;--muted:#8f8375;--gold:#9dbd1f;--line:rgba(241,234,223,.16);--serif:'DM Serif Display',Georgia,serif;--sans:'Manrope',Arial,sans-serif;
+  --bg:var(--paper);--fg:var(--ink);--bg-strong:var(--paper);--fg-strong:var(--ink);--surface:#ffffff;--surface-muted:#ece5d5;--border-soft:rgba(23,19,17,.12)}
+html[data-theme="dark"]{--bg:#1b1713;--fg:#f1eadf;--bg-strong:#1b1713;--fg-strong:#f1eadf;--surface:#242019;--surface-muted:#2b2620;--border-soft:rgba(241,234,223,.14)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px;transition:background .25s ease,color .25s ease}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+button{cursor:pointer}
+.eyebrow{margin:0 0 20px;color:var(--gold);font-size:9px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
+.hero h1,h2{margin:0;font-family:var(--serif);font-weight:400;line-height:.94}
+.hero h1 em,h2 em{color:var(--gold);font-style:italic}
+.marquee-bar{background:var(--ink);color:var(--paper);overflow:hidden;white-space:nowrap;padding:9px 0;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.marquee-track{display:inline-flex;gap:44px;animation:marquee 26s linear infinite;padding-left:44px}
+.marquee-track span{opacity:.85}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.site-header{position:absolute;z-index:5;top:37px;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:20px 4vw;color:var(--fg-strong)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:11px}
+.brand i{font-family:var(--serif);font-weight:400;letter-spacing:0;text-transform:none;color:var(--gold);font-style:italic}
+.brand-mark{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--gold);font-size:9px;font-weight:800;color:#1d1713;cursor:pointer;user-select:none}
+nav{display:flex;gap:30px;font-size:11px;font-weight:700}
+nav a{opacity:.75;text-transform:none;position:relative;padding-bottom:2px}
+nav a:hover{opacity:1}
+.header-actions{display:flex;align-items:center;gap:9px}
+.icon-pill{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--surface);border:1px solid var(--border-soft);color:var(--fg-strong);flex-shrink:0}
+.icon-pill svg{width:15px;height:15px}
+.cart-button{border:0;background:none;color:var(--fg-strong);font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;display:inline-flex;align-items:center;gap:9px;position:relative}
+.cart-button svg{width:16px;height:16px;flex-shrink:0}
+.cart-button b{position:absolute;top:-4px;right:-4px;display:grid;place-items:center;min-width:15px;height:15px;padding:0 3px;color:#1d1713;background:var(--gold);border-radius:50%;font-size:8px}
+.header-actions .cart-button{background:var(--surface);border:1px solid var(--border-soft);border-radius:50%;width:36px;height:36px;justify-content:center}
+.header-actions .cart-button b{position:absolute}
+.auth-pill-row{display:flex;gap:8px}
+.auth-pill-row .auth-open-btn{border-radius:30px;background:var(--ink);color:var(--paper);border-color:var(--ink);padding:10px 18px}
+.auth-pill-row .auth-open-btn.filled{background:var(--gold);color:#16150f;border-color:var(--gold)}
+.hero{position:relative;background:var(--bg-strong);color:var(--fg-strong);overflow:hidden;padding-bottom:0;transition:background .25s ease,color .25s ease}
+.hero-copy{position:relative;z-index:1;max-width:640px;margin:0;padding:172px 6vw 40px}
+.hero-copy .eyebrow{display:flex;align-items:center;gap:8px;color:var(--muted);font-weight:800;}
+.hero-copy .eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.hero h1{font-size:clamp(38px,5.6vw,58px);letter-spacing:-.01em;line-height:1.05}
+.hero-copy>p:not(.eyebrow){max-width:460px;margin:22px 0 30px;color:var(--muted);line-height:1.8;font-size:13.5px}
+.button{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;border:0;padding:16px 21px;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.button.gold{background:var(--gold);color:#16150f}
+.button.dark{background:var(--charcoal);color:#fff}
+.hero-cta-row{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.hero-cta{display:inline-flex;align-items:center;gap:16px;background:var(--ink);color:var(--paper);border-radius:40px;padding:6px 6px 6px 22px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+.hero-cta span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--gold);color:#16150f;font-size:14px}
+.hero-cta:hover{opacity:.88}
+.hero-view-link{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-strong);opacity:.75}
+.hero-view-link:hover{opacity:1}
+.hero-stats{display:flex;gap:44px;padding:0 6vw 44px;max-width:900px}
+.hero-stats b{font-family:var(--serif);font-weight:400;font-size:22px;color:var(--gold)}
+.hero-stats p{margin:8px 0 0;font-size:10.5px;color:var(--muted);line-height:1.5;max-width:150px}
+/* 5-photo arch gallery strip (kept per feedback — looks good) */
+.hero-strip{position:relative;z-index:1;max-width:1360px;margin:0 auto;padding:0 4vw 70px}
+.hero-arches{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:2px}
+.hero-arches::-webkit-scrollbar{display:none}
+.hero-arch{position:relative;overflow:hidden;border-radius:220px 220px 14px 14px;background:var(--surface-muted);flex:0 0 auto;width:clamp(140px,18vw,240px);aspect-ratio:3/4.3;scroll-snap-align:start}
+.hero-arch img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.hero-arch:hover img{transform:scale(1.06)}
+.arch-tag{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:rgba(15,12,10,.72);backdrop-filter:blur(4px);color:#fff;padding:12px 18px;border-radius:14px;text-align:center;font-size:11px;width:82%}
+.arch-tag b{display:block;font-family:var(--serif);font-size:15px;font-weight:400;color:var(--gold);margin-top:2px}
+.hero-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:rgba(20,17,15,.65);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.15);color:#fff;cursor:pointer}
+.hero-arrow:hover{background:var(--gold);color:#1d1713;border-color:var(--gold)}
+.hero-arrow.prev{left:-4px}
+.hero-arrow.next{right:-4px}
+/* Promo bar */
+.promo-bar{background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 4vw;font-size:10.5px;letter-spacing:.06em;flex-wrap:wrap}
+.promo-bar b{color:var(--gold)}
+.promo-bar a{font-weight:800;text-transform:uppercase;letter-spacing:.1em;white-space:nowrap}
+@media(max-width:640px){nav{display:none}.hero-copy{padding-top:130px}.hero-stats{flex-wrap:wrap;gap:24px}.site-header{top:34px}}
+.manifesto,.collection,.orders{padding:120px 8vw}
+.manifesto{display:grid;grid-template-columns:1fr 1fr;gap:8vw}
+.manifesto h2,.section-heading h2,.orders h2{font-size:clamp(48px,6vw,84px)}
+.manifesto>div>p:not(.eyebrow),.section-heading>p,.orders>div>p:not(.eyebrow){max-width:480px;color:#75695e;line-height:1.9}
+.stats{display:flex;gap:40px;margin-top:48px;padding-top:24px;border-top:1px solid #d3c8bb}
+.stats span{display:grid;gap:5px;color:#75695e;font-size:10px}
+.stats b{color:var(--ink);font-size:18px}
+.section-heading{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:54px}
+.section-heading>p{max-width:280px}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product-card{background:#e3dbcf}
+.product-card img{display:block;width:100%;height:360px;object-fit:cover}
+.product-card div{padding:20px}
+.product-card small{color:#8f8173;font-size:9px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.product-card h3{margin:10px 0;font-family:var(--serif);font-size:23px;font-weight:400}
+.product-card p{min-height:42px;color:#786c60;font-size:11px;line-height:1.6}
+.product-card button{border:0;border-bottom:1px solid var(--ink);background:none;padding:8px 0;font-size:9px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.studio{background:var(--charcoal);color:#fff}
+.studio-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:7vw;padding:100px 8vw}
+.studio-preview{position:relative;min-height:580px;background:#332b26;overflow:hidden}
+.studio-preview img{display:block;width:100%;height:100%;min-height:580px;object-fit:cover}
+.studio-preview span#previewTint{position:absolute;inset:0;background:transparent;pointer-events:none;transition:background 300ms,opacity 300ms}
+.preview-label{position:absolute;top:25px;left:25px;color:rgba(30,24,20,.7);font-family:var(--serif);font-size:24px;line-height:.9;transform:rotate(-6deg)}
+.preview-label small{font-family:var(--sans);font-size:8px;letter-spacing:.14em;text-transform:uppercase}
+.studio-controls{padding:20px 0}
+.studio-controls h2{font-size:clamp(52px,6vw,84px)}
+.studio-controls>p:not(.eyebrow){max-width:390px;color:#b0a49a;line-height:1.8}
+.current-piece{display:grid;grid-template-columns:1fr auto;gap:5px 20px;margin:42px 0 22px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.current-piece span{grid-column:1/-1;color:var(--gold);font-size:9px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.current-piece strong{font-family:var(--serif);font-size:25px;font-weight:400}
+.current-piece b{color:var(--gold);font-size:18px}
+.option-group{margin:20px 0}
+.option-group>strong{display:block;margin-bottom:10px;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.option-list{display:flex;flex-wrap:wrap;gap:8px}
+.option-list button{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:transparent;color:#fff;padding:11px 12px;font-size:10px}
+.option-list button.active{border-color:var(--gold);color:var(--gold)}
+.swatch{width:12px;height:12px;border-radius:50%;border:1px solid rgba(255,255,255,.4)}
+.full{width:100%;margin-top:26px}
+.orders-section{position:relative;padding:110px 8vw 120px;background:var(--charcoal);color:#fff;overflow:hidden}
+.orders-bg-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--serif);font-size:clamp(100px,18vw,220px);color:rgba(255,255,255,.03);white-space:nowrap;pointer-events:none;user-select:none;letter-spacing:-.04em}
+.orders-inner{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}
+.orders-heading{font-size:clamp(42px,5.5vw,80px);margin:16px 0 20px}
+.orders-sub{color:#b0a49a;line-height:1.9;max-width:380px;font-size:13px}
+.orders-steps{display:flex;align-items:center;gap:0;margin-top:40px;flex-wrap:wrap;gap:4px}
+.orders-step{display:flex;align-items:center;gap:9px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#998d82}
+.step-dot{display:grid;place-items:center;width:30px;height:30px;border:1px solid #51463f;color:var(--gold);font-size:9px;font-weight:800;flex-shrink:0}
+.orders-step-line{width:24px;height:1px;background:#463c36;flex-shrink:0}
+.track-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:38px 36px}
+.track-cta-card{text-align:center}
+.track-cta-copy{color:#c6b9aa;line-height:1.8;margin-bottom:24px}
+.track-hint{color:#51463f;font-size:10px;margin-top:18px;line-height:1.7}
+/* Track order popup — light card (matches reference) */
+.track-modal{width:min(440px,92vw);background:var(--surface);border:1px solid var(--border-soft);border-radius:16px;box-shadow:0 40px 90px -25px rgba(0,0,0,.4);color:var(--fg)}
+.track-modal .close{color:var(--muted)}
+.track-modal .close:hover{color:var(--gold)}
+.track-modal h2{font-size:30px;color:var(--fg);margin-bottom:20px}
+.track-input-wrap{display:flex;gap:10px;margin:0 0 30px}
+.track-input-wrap input{border:1px solid var(--border-soft);border-radius:30px;background:var(--surface-muted);color:var(--fg);padding:14px 18px;font-size:12px;font-family:var(--sans);outline:none;flex:1;min-width:0}
+.track-input-wrap input::placeholder{color:var(--muted)}
+.track-input-wrap input:focus{border-color:var(--gold)}
+.track-submit-btn{border:0;border-radius:30px;background:var(--ink);color:var(--paper);padding:0 22px;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:opacity .2s}
+.track-submit-btn:hover{opacity:.85}
+.track-default{text-align:center;padding:6px 6px 30px;color:var(--muted)}
+.track-default-icon{display:grid;place-items:center;width:60px;height:60px;margin:0 auto 18px;border-radius:50%;background:var(--surface-muted);font-size:22px}
+.track-default strong{display:block;font-family:var(--serif);font-size:22px;color:var(--fg);font-weight:400;margin-bottom:6px}
+.track-default p{margin:0;font-size:12px}
+.track-modal-note{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:10.5px;padding-top:20px;border-top:1px solid var(--border-soft);margin:0}
+.track-result-card{margin-top:6px;border-left:3px solid var(--gold);padding:16px 18px;background:var(--surface-muted);border-radius:0 10px 10px 0}
+.track-result-card.error{border-color:#b76d5d;background:rgba(183,109,93,.08)}
+.track-result-id{font-family:var(--serif);font-size:20px;margin-bottom:10px;color:var(--fg)}
+.track-result-status{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+.track-result-row{display:flex;gap:8px;align-items:center;font-size:11px;color:var(--muted);margin-bottom:5px}
+.track-result-row span{color:var(--fg)}
+.track-error-msg{color:#b76d5d;font-size:12px}
+footer{display:flex;justify-content:space-between;align-items:center;padding:28px 8vw;background:#161311;color:#c6b9aa;font-size:10px}
+footer p{color:#8d8177}
+footer>a:last-child{color:var(--gold)}
+.drawer{position:fixed;z-index:10;top:0;right:0;bottom:0;width:min(420px,92vw);padding:45px 32px;background:var(--paper);transform:translateX(105%);transition:transform .3s ease}
+.modal{position:fixed;z-index:12;top:50%;left:50%;width:min(580px,92vw);padding:38px;background:var(--paper);transform:translate(-50%,-46%);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease}
+.modal.open{transform:translate(-50%,-50%);opacity:1;pointer-events:auto}
+.modal h2{font-size:60px;margin-bottom:25px}
+.modal form{display:grid;gap:10px}
+.modal form input,.modal textarea,.modal select{border:1px solid #cfc3b6;background:transparent;padding:14px}
+.modal textarea{min-height:85px;resize:vertical}
+.checkout-note{color:#887c71;font-size:11px}
+.drawer.open{transform:none}
+.close{position:absolute;top:20px;right:22px;border:0;background:none;font-size:28px}
+.backdrop{position:fixed;z-index:9;inset:0;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .3s}
+.backdrop.open{opacity:1;pointer-events:auto}
+.drawer h2{font-size:54px}
+.cart-row{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid #d0c5b9;align-items:flex-start}
+.cart-row img{border-radius:2px}
+.cart-row-body{flex:1;min-width:0}
+.cart-row-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.cart-qty-tag{display:inline-block;margin-top:6px;padding:3px 8px;background:#e3dbcf;color:#75695e;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-radius:20px}
+.cart-row .close{position:static;font-size:20px;color:#a89a8c;padding:2px 6px}
+.cart-row .close:hover{color:#b76d5d}
+.cart-empty{text-align:center;padding:50px 10px 10px;color:var(--muted)}
+.cart-empty-icon{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 20px;border-radius:50%;background:var(--surface-muted);font-size:24px}
+.cart-empty strong{display:block;font-family:var(--serif);font-size:24px;color:var(--fg);font-weight:400;margin-bottom:8px}
+.cart-empty p{margin:0 0 26px;font-size:12.5px;line-height:1.7}
+.cart-empty .button{display:inline-flex;margin:0 auto}
+.cart-head-count{color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:-14px 0 20px;}
+.drawer.cart-modal{top:50%;left:50%;right:auto;bottom:auto;width:min(460px,92vw);max-height:88vh;overflow-y:auto;border-radius:16px;padding:40px 34px;background:var(--surface);border:1px solid var(--border-soft);box-shadow:0 40px 90px -25px rgba(0,0,0,.4);transform:translate(-50%,-46%) scale(.96);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease}
+.drawer.cart-modal.open{transform:translate(-50%,-50%) scale(1);opacity:1;pointer-events:auto}
+.drawer.cart-modal h2{display:flex;align-items:baseline;gap:8px;color:var(--fg)}
+.cart-row img{width:64px;height:72px;object-fit:cover}
+.cart-row strong{font-family:var(--serif);font-size:18px;font-weight:400}
+.cart-row small{display:block;margin-top:8px;color:#7d7166}
+.cart-total{display:flex;justify-content:space-between;margin:30px 0;font-size:12px}
+.cart-total b{font-size:20px}
+/* My orders drawer */
+.my-order-card{position:relative;margin-bottom:20px;background:#1a1512;color:#f1eadf;overflow:hidden}
+.my-order-card-accent{position:absolute;top:0;left:0;width:4px;height:100%}
+.status-pending .my-order-card-accent{background:#c79a5a}
+.status-accepted .my-order-card-accent{background:#4f9a5a}
+.status-shipped .my-order-card-accent{background:#4a7ab5}
+.status-delivered .my-order-card-accent{background:#2d8a4a}
+.status-cancelled .my-order-card-accent{background:#b75a5a}
+.my-order-card-inner{padding:20px 20px 20px 26px}
+.my-order-card-head{display:flex;justify-content:space-between;align-items:start;margin-bottom:14px;gap:10px}
+.my-order-id{font-family:var(--serif);font-size:22px;line-height:1;color:#f1eadf}
+.my-order-date{font-size:9px;color:#7d7166;margin-top:5px;letter-spacing:.08em}
+.my-order-status-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;flex-shrink:0}
+.status-pending .my-order-status-badge{background:rgba(199,154,90,.15);color:#c79a5a;border:1px solid rgba(199,154,90,.3)}
+.status-accepted .my-order-status-badge{background:rgba(79,154,90,.15);color:#7dcf8a;border:1px solid rgba(79,154,90,.3)}
+.status-shipped .my-order-status-badge{background:rgba(74,122,181,.15);color:#7aabdf;border:1px solid rgba(74,122,181,.3)}
+.status-delivered .my-order-status-badge{background:rgba(45,138,74,.15);color:#6dcc8a;border:1px solid rgba(45,138,74,.3)}
+.status-cancelled .my-order-status-badge{background:rgba(183,90,90,.15);color:#df8a8a;border:1px solid rgba(183,90,90,.3)}
+.my-order-divider{height:1px;background:rgba(255,255,255,.07);margin:14px 0}
+.my-order-items-list{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
+.my-order-item-row{display:flex;justify-content:space-between;align-items:center;font-size:11px}
+.my-order-item-name{color:#c6b9aa}
+.my-order-item-price{color:#f1eadf;font-weight:600}
+.my-order-total-row{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid rgba(255,255,255,.07)}
+.my-order-total-label{font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#7d7166}
+.my-order-total-amount{
