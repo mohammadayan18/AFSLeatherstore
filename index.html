@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AFS Leather — Custom leather, made slowly.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <script>(function(){try{if(localStorage.getItem('afs-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span>FREE DELIVERY ACROSS PAKISTAN</span><span>·</span><span>COMPLIMENTARY MONOGRAMMING THIS WEEK</span><span>·</span><span>MADE SLOWLY</span><span>·</span><span>DESIGNED FOR A LONG LIFE</span><span>·</span>
+      <span>FREE DELIVERY ACROSS PAKISTAN</span><span>·</span><span>COMPLIMENTARY MONOGRAMMING THIS WEEK</span><span>·</span><span>MADE SLOWLY</span><span>·</span><span>DESIGNED FOR A LONG LIFE</span><span>·</span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" id="adminTrigger" title="Studio access">AFS</span>
+      <a href="#top" style="display:flex;align-items:center;gap:10px;"><span>AFS <i>Leather</i></span></a>
+    </div>
+    <nav>
+      <a href="#top">Home</a>
+      <a href="#collection">Shop</a>
+      <a href="preview.html" id="studioNavLink">Studio</a>
+      <a href="#" id="trackOrderNav">Track order</a>
+      <a href="#" id="myOrdersNav">My Orders</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-pill" id="trackOrderIcon" title="Track your order" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="icon-pill" id="themeToggle" title="Toggle dark mode" type="button">
+        <svg id="themeIconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg id="themeIconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button class="cart-button" data-open-cart><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><b id="cartCount">00</b></button>
+      <div id="authArea"></div>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">The new everyday, made better</p>
+        <h1>Leather, with<br><em>a little soul.</em></h1>
+        <p>Leather jackets, belts, wallets and caps — shaped by hand, built for daily wear, and designed to get better with age. Shop the studio edit, then make it yours.</p>
+        <div class="hero-cta-row">
+          <a class="hero-cta" href="#collection">Explore the edit <span>→</span></a>
+          <a class="hero-view-link" href="#collection">Our point of view ›</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div><b>01</b><p>Made in small studio batches</p></div>
+        <div><b>02</b><p>Vegetable-tanned leather</p></div>
+        <div><b>∞</b><p>Designed to age beautifully</p></div>
+      </div>
+      <div class="hero-strip">
+        <button class="hero-arrow prev" id="heroPrev" type="button" aria-label="Previous">←</button>
+        <div class="hero-arches" id="heroArches"></div>
+        <button class="hero-arrow next" id="heroNext" type="button" aria-label="Next">→</button>
+      </div>
+    </section>
+
+    <div class="promo-bar">
+      <span>THIS WEEK AT THE STUDIO &nbsp; <b>Free leather monogramming</b> ✳ On all orders above Rs. 12,000</span>
+      <a href="#collection">Shop now →</a>
+    </div>
+
+
+    <section class="manifesto">
+      <div>
+        <p class="eyebrow">Our point of view</p>
+        <h2>Objects that get<br><em>better with use.</em></h2>
+      </div>
+      <div>
+        <p>Leather is not a finish we apply. It is the beginning of the design. We cut slowly, keep the useful marks, and leave room for the material to become yours.</p>
+        <div class="stats">
+          <span><b>12 yrs</b>of quiet craft</span>
+          <span><b>01 of 01</b>made for you</span>
+          <span><b>48 hr</b>studio response</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection" id="collection">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">The studio edit / 2026</p>
+          <h2>Leather goods,<br><em>well considered.</em></h2>
+        </div>
+        <p>A tightly edited collection for carrying, wearing and giving. Every piece can be customised at checkout.</p>
+      </div>
+      <div class="collection-toolbar">
+        <div class="filter-chips" id="filterChips"></div>
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input id="productSearch" placeholder="Search belt, wallet, jacket, cap…" autocomplete="off">
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+    <!-- ================= PRODUCT DETAIL PAGE ================= -->
+    <section class="page-overlay" id="productDetail">
+      <div class="page-overlay-bar">
+        <button class="page-back" id="closeProductDetail">← Back to collection</button>
+        <span class="page-crumb" id="pdCrumb"></span>
+        <button class="page-x" id="closeProductDetailX" title="Close" type="button">×</button>
+      </div>
+      <div class="pd-wrap">
+        <div class="pd-media">
+          <img id="pdImage" alt="">
+        </div>
+        <div class="pd-info">
+          <p class="eyebrow" id="pdCategory"></p>
+          <h1 id="pdName"></h1>
+          <div class="pd-price-row">
+            <span class="pd-price" id="pdPrice"></span>
+            <span class="pd-price-note">Made to order · ships in 5–7 days</span>
+          </div>
+          <p class="pd-desc" id="pdDescription"></p>
+          <div class="pd-qty-row">
+            <strong>Quantity</strong>
+            <div class="qty-stepper">
+              <button type="button" id="pdQtyMinus">−</button>
+              <span id="pdQtyValue">1</span>
+              <button type="button" id="pdQtyPlus">+</button>
+            </div>
+          </div>
+          <div class="pd-actions">
+            <button class="button dark" id="pdAddToCart">Add to cart <span>→</span></button>
+            <button class="button gold" id="pdCustomize">Customize this product <span>↗</span></button>
+          </div>
+          <ul class="pd-meta-list">
+            <li><b>✓</b> Hand-finished full-grain leather</li>
+            <li><b>✓</b> Free size & fit adjustment on request</li>
+            <li><b>✓</b> Cash on delivery available nationwide</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Track order — popup -->
+  <div class="modal track-modal" id="trackModal">
+    <button class="close" data-close-track>×</button>
+    <p class="eyebrow">Live order updates</p>
+    <h2>Track your <em>piece.</em></h2>
+    <form id="trackForm" class="track-input-wrap">
+      <input id="trackId" placeholder="Enter your track ID" required autocomplete="off">
+      <button class="track-submit-btn" type="submit">Find</button>
+    </form>
+    <div id="trackDefault" class="track-default">
+      <span class="track-default-icon">📦</span>
+      <strong>Your order, in your hands.</strong>
+      <p>Your track ID arrives here after checkout.</p>
+    </div>
+    <div id="trackResult" class="track-result-card" style="display:none"></div>
+    <p class="track-modal-note">✉ Status updates are sent to your order email.</p>
+  </div>
+  <!-- ================= AUTH MODAL (Login / Sign up / Forgot password) ================= -->
+  <div class="modal auth-modal" id="authModal">
+    <button class="close" data-close-auth>×</button>
+    <div class="auth-modal-grid">
+      <div class="auth-side">
+        <div class="auth-brandmark"><span>AFS</span> AFS Account</div>
+        <h2 class="auth-side-title">Your leather<br>story starts <em>here.</em></h2>
+        <p class="auth-side-copy">Save your edits, track every order, and keep your favourite pieces close.</p>
+        <ul class="auth-perks">
+          <li>◆ OTP verified accounts</li>
+          <li>◆ Faster checkout next time</li>
+          <li>◆ Private order tracking</li>
+        </ul>
+      </div>
+      <div class="auth-main">
+    <p class="eyebrow auth-secure-tag">🔒 Secure account</p>
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-auth-tab="login">Sign in</button>
+      <button class="auth-tab" data-auth-tab="signup">Create account</button>
+    </div>
+
+    <form id="loginForm" class="auth-panel active">
+      <p class="eyebrow">Welcome back</p>
+      <h2>Login to your account</h2>
+      <input id="loginEmail" type="email" placeholder="Email address" required autocomplete="email">
+      <input id="loginPassword" type="password" placeholder="Password" required autocomplete="current-password">
+      <p class="auth-error" id="loginError"></p>
+      <button class="button gold full" type="submit">Login →</button>
+      <a href="#" id="forgotPasswordLink" class="auth-link">Forgot password?</a>
+    </form>
+
+    <form id="signupForm" class="auth-panel">
+      <p class="eyebrow">New here?</p>
+      <h2>Create your account</h2>
+      <p class="auth-note">Order place karne ke liye ek account chahiye — 1 minute lagega.</p>
+      <input id="signupName" placeholder="Full name" required autocomplete="name">
+      <input id="signupEmail" type="email" placeholder="Email address" required autocomplete="email">
+      <input id="signupPhone" placeholder="Phone number, e.g. 03001234567" required autocomplete="tel">
+      <select id="signupCity" required>
+      <option value="">Select city</option>
+      <option>Karachi</option>
+      <option>Lahore</option>
+      <option>Islamabad</option>
+      <option>Rawalpindi</option>
+      <option>Faisalabad</option>
+      <option>Multan</option>
+      <option>Peshawar</option>
+      <option>Quetta</option>
+      <option>Sialkot</option>
+      <option>Gujranwala</option>
+      <option>Hyderabad</option>
+      <option>Bahawalpur</option>
+      <option>Sargodha</option>
+      <option>Sukkur</option>
+      <option>Sheikhupura</option>
+      <option>Gujrat</option>
+      <option>Kasur</option>
+      <option>Sahiwal</option>
+      <option>Okara</option>
+      <option>Abbottabad</option>
+      <option>Mardan</option>
+      <option>Muzaffargarh</option>
+      <option>Jhang</option>
+      <option>Chiniot</option>
+      <option>Mingora</option>
+      <option value="Other">Other</option>
+      </select>
+      <input id="signupCityOther" placeholder="Apna city likho" style="display:none">
+      <textarea id="signupAddress" placeholder="Complete address" required></textarea>
+      <input id="signupPostal" placeholder="Postal code" required>
+      <input id="signupPassword" type="password" placeholder="Password (min 6 characters)" required autocomplete="new-password">
+      <input id="signupConfirmPassword" type="password" placeholder="Confirm password" required autocomplete="new-password">
+      <p class="auth-error" id="signupError"></p>
+      <button class="button gold full" type="submit">Sign Up →</button>
+    </form>
+
+    <form id="forgotStep1Form" class="auth-panel">
+      <p class="eyebrow">Reset password</p>
+      <h2>Enter your email</h2>
+      <p class="auth-note">Aapke email par ek 6-digit OTP code bhejenge.</p>
+      <input id="fpEmail" type="email" placeholder="Email address" required>
+      <p class="auth-error" id="fpStep1Error"></p>
+      <button class="button gold full" type="submit">Send OTP →</button>
+      <a href="#" id="backToLoginLink" class="auth-link">Back to login</a>
+    </form>
+
+    <form id="forgotStep2Form" class="auth-panel">
+      <p class="eyebrow">Check your email</p>
+      <h2>Enter the OTP & new password</h2>
+      <input id="fpOtp" placeholder="6-digit OTP" maxlength="6" required>
+      <input id="fpNewPassword" type="password" placeholder="New password" required autocomplete="new-password">
+      <input id="fpConfirmPassword" type="password" placeholder="Confirm new password" required autocomplete="new-password">
+      <p class="auth-error" id="fpStep2Error"></p>
+      <button class="button gold full" type="submit">Reset password →</button>
+    </form>
+
+    <form id="signupOtpForm" class="auth-panel">
+      <p class="eyebrow">Verify your email</p>
+      <h2>OTP Enter karo</h2>
+      <p class="signup-otp-hint" style="color:var(--muted);font-size:12px;margin:0;"></p>
+      <input id="signupOtpInput" placeholder="6-digit OTP" maxlength="6" required autocomplete="one-time-code">
+      <p class="auth-error" id="signupOtpError"></p>
+      <button class="button gold full" type="submit">Verify & Sign Up →</button>
+    </form>
+      </div>
+    </div>
+  </div>
+  <!-- My Orders Drawer -->
+  <aside class="drawer" id="myOrdersDrawer" style="overflow-y:auto;">
+    <button class="close" id="closeMyOrders">×</button>
+    <p class="eyebrow" style="margin-top:8px;">Your purchases</p>
+    <h2 style="margin-bottom:24px;">My <em style="font-family:var(--serif);font-style:italic;color:var(--gold);">Orders</em></h2>
+    <div id="myOrdersList"></div>
+  </aside>
+
+  <footer>
+    <a class="brand" href="#top"><span class="brand-mark">AFS</span><span>AFS <i>Leather</i></span></a>
+    <p>Custom leather goods for a life well carried.</p>
+    <a href="preview.html">Back to studio ↗</a>
+  </footer>
+
+  <aside class="drawer cart-modal" id="cartDrawer">
+    <button class="close" data-close-cart>×</button>
+    <p class="eyebrow">Your edit</p>
+    <h2>Shopping bag <span id="cartModalCount" style="color:var(--muted);font-family:var(--sans);font-size:16px;font-weight:700;">(0)</span></h2>
+    <p class="cart-head-count" id="cartHeadCount"></p>
+    <div id="cartItems"></div>
+    <div id="cartFooter" style="display:none;">
+      <div class="cart-total"><span>Estimated total</span><b id="cartTotal">Rs. 0</b></div>
+      <button class="button gold full" id="checkout">Proceed to checkout →</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="checkoutModal">
+    <button class="close" data-close-checkout>×</button>
+    <p class="eyebrow">CONFIRM YOUR ORDER</p>
+    <h2>Let's send it<br><em>to you.</em></h2>
+    <form id="checkoutForm">
+      <input id="customerName" placeholder="Full name" required>
+      <input id="customerPhone" placeholder="Phone number" required>
+      <textarea id="customerAddress" placeholder="Complete delivery address" required></textarea>
+      <input id="customerPostal" placeholder="Postal code" required>
+      <select id="payment">
+        <option>Cash on Delivery (COD)</option>
+        <option>JazzCash</option>
+        <option>EasyPaisa</option>
+      </select>
+      <button class="button gold full" type="submit">Place order →</button>
+    </form>
+    <p class="checkout-note">Demo checkout — no payment is charged.</p>
+  </div>
+
+  <!-- Change password modal -->
+  <div class="modal auth-modal auth-modal-narrow" id="changePasswordModal">
+    <button class="close" data-close-changepw>×</button>
+    <div class="auth-main">
+    <p class="eyebrow auth-secure-tag">🔒 Account security</p>
+    <h2 style="font-size:34px;">Change<br><em>password.</em></h2>
+    <form id="changePasswordForm">
+      <input id="cpCurrent" type="password" placeholder="Current password" required autocomplete="current-password">
+      <input id="cpNew" type="password" placeholder="New password (min 6 characters)" required autocomplete="new-password">
+      <input id="cpConfirm" type="password" placeholder="Confirm new password" required autocomplete="new-password">
+      <p class="auth-error" id="cpError"></p>
+      <button class="button gold full" type="submit">Update password →</button>
+    </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="backdrop" id="backdrop"></div>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="config.js"></script>
+  <script src="storage.js"></script>
+  <script src="user.js"></script>
+</body>
+                                                                                                                               </html>
+          
