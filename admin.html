@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Studio Access — AFS Leather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Password modal (Studio access) -->
+  <div class="pw-modal" id="pwModal">
+    <div class="pw-box">
+      <p class="eyebrow">Studio Access</p>
+      <h3>Enter password</h3>
+      <input type="password" id="pwInput" placeholder="••••••••" maxlength="30">
+      <p class="pw-error" id="pwError"></p>
+      <button class="pw-submit" id="pwSubmit">Unlock →</button>
+      <button class="pw-cancel" id="pwCancel">Cancel</button>
+    </div>
+  </div>
+
+  <!-- ================= ADMIN PANEL (5 clicks on AFS mark + password) ================= -->
+  <section class="admin-overlay" id="adminPanel" aria-hidden="true">
+    <div class="admin-shell">
+      <button class="admin-close" id="closeAdmin" title="Back to site">×</button>
+      <div class="admin-intro">
+        <p class="eyebrow">Private studio / control center</p>
+        <h2>Shape the <em>collection.</em></h2>
+        <p>AFS mark par <b>5 clicks</b> karo. Changes yahan se customer studio mein turant update ho jaate hain.</p>
+      </div>
+      <div class="admin-tabs">
+        <button class="admin-tab active" data-tab="products">Products</button>
+        <button class="admin-tab" data-tab="orders">Orders <span id="adminOrderBadge" class="order-badge"></span></button>
+        <button class="admin-tab" data-tab="hero">Hero images</button>
+      </div>
+      <div class="admin-tab-content" id="tabProducts">
+        <div class="admin-grid">
+          <aside class="admin-products">
+            <p class="eyebrow">Products</p>
+            <div id="adminProductList"></div>
+            <button class="admin-outline" id="newProduct">+ Add product</button>
+          </aside>
+          <section class="admin-editor">
+            <div class="admin-editor-head">
+              <div>
+                <p class="eyebrow">Selected product</p>
+                <h3 id="adminTitle">Choose a product</h3>
+              </div>
+              <span class="admin-sync">Local edits</span>
+            </div>
+            <div id="adminEditorBody">
+              <p class="admin-empty">Select a product to edit its main image, color codes, groups, or replacement PNGs.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="admin-tab-content" id="tabOrders" style="display:none">
+        <div id="adminOrdersList"></div>
+      </div>
+      <div class="admin-tab-content" id="tabHero" style="display:none">
+        <p class="eyebrow" style="margin-bottom:6px;">Homepage arch gallery</p>
+        <p class="admin-empty" style="margin-bottom:24px;">These 5 photos appear under the homepage headline. Leave a slot empty to fall back to a product photo automatically.</p>
+        <div id="adminHeroBody"></div>
+        <button class="admin-save" id="adminHeroSave" style="margin-top:20px;max-width:260px;">Save hero images</button>
+      </div>
+    </div>
+  </section>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="config.js"></script>
+  <script src="storage.js"></script>
+  <script src="api.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
